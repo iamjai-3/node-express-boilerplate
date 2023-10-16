@@ -1,6 +1,6 @@
-import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, Unique, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { User } from '@interfaces/users.interface';
+import { IsNotEmpty } from 'class-validator';
+import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, Unique, UpdateDateColumn } from 'typeorm';
 
 @Entity({ name: 'users' })
 export class UserEntity extends BaseEntity implements User {

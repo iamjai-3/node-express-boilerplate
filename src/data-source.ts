@@ -1,5 +1,5 @@
-import { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_DATABASE } from './config';
 import { DataSource, DataSourceOptions } from 'typeorm';
+import { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_PORT, DB_USER } from './config';
 
 export const dbConnection: DataSourceOptions = {
   type: 'postgres',
