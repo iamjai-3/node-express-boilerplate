@@ -12,13 +12,13 @@
       "test": "jest --forceExit --detectOpenHandles",
       "lint": "eslint --ignore-path .gitignore --ext .ts src/",
       "lint:fix": "npm run lint -- --fix",
-      "typeorm":"typeorm-ts-node-commonjs",
+      "typeorm": "typeorm-ts-node-commonjs",
       "schema:sync": "npm run typeorm schema:sync -- -d src/data-source.ts",
       "schema:drop": "npm run typeorm schema:drop -- -d src/data-source.ts",
       "migration:show": "npm run typeorm migration:show -- -d src/data-source.ts",
       "migration:generate": "npm run typeorm migration:generate -- -d src/data-source.ts ./src/database/migrations/%npm_config_filename%",
-      "migration:run": "npm run typeorm migration:run -- -d src/data-source.ts" ,
-      "migration:drop": "npm run typeorm migration:revert -- -d src/data-source.ts" ,
+      "migration:run": "npm run typeorm migration:run -- -d src/data-source.ts",
+      "migration:drop": "npm run typeorm migration:revert -- -d src/data-source.ts",
       "migration:create": "npm run typeorm migration:create src/database/migrations/%npm_config_filename%"
    },
    "dependencies": {
@@ -39,8 +39,9 @@
       "reflect-metadata": "^0.1.13",
       "swagger-jsdoc": "^6.2.8",
       "swagger-ui-express": "^5.0.0",
-      "typeorm": "0.3.17",
       "typedi": "^0.10.0",
+      "typeorm": "0.3.17",
+      "uuid": "^9.0.1",
       "winston": "^3.11.0",
       "winston-daily-rotate-file": "^4.7.1"
    },
