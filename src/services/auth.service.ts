@@ -1,12 +1,12 @@
+import { HttpException } from '@/exceptions/httpException';
+import { SECRET_KEY } from '@config';
+import { UserEntity } from '@entities/users.entity';
+import { DataStoredInToken, TokenData } from '@interfaces/auth.interface';
+import { User } from '@interfaces/users.interface';
 import { compare, hash } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 import { Service } from 'typedi';
 import { Entity, Repository } from 'typeorm';
-import { SECRET_KEY } from '@config';
-import { UserEntity } from '@entities/users.entity';
-import { HttpException } from '@/exceptions/httpException';
-import { DataStoredInToken, TokenData } from '@interfaces/auth.interface';
-import { User } from '@interfaces/users.interface';
 
 const createToken = (user: User): TokenData => {
   const dataStoredInToken: DataStoredInToken = { id: user.id };
