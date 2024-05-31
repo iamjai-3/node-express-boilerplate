@@ -48,6 +48,7 @@ export class App {
     AppDataSource.initialize()
       .then(() => {
         logger.info(`======= Data Source has been initialized =======`);
+        logger.info(`======= Connected to Database =======`);
       })
       .catch(err => {
         logger.error('Error during Data Source initialization', err);
