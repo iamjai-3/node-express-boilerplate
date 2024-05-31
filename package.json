@@ -1,7 +1,7 @@
 {
-  "name": "express-typeorm-instance",
+  "name": "node-express-boilerplate",
   "version": "0.0.0",
-  "description": "TypeScript + TypeORM + PostgreSQL + Express API Server",
+  "description": "TypeScript + PostgreSQL + Express API Server",
   "author": "",
   "license": "ISC",
   "scripts": {
