@@ -1,6 +1,6 @@
 import { HttpException } from '@/exceptions/httpException';
 import { UserService } from '@/services/users.service';
-import { UserEntity } from '@entities/users.entity';
+import { UserEntity } from '@/schemas/users.entity';
 import { hash } from 'bcrypt';
 import Container from 'typedi';
 

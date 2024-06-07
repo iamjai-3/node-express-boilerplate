@@ -12,7 +12,7 @@ import morgan from 'morgan';
 import 'reflect-metadata';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import { AppDataSource } from './data-source';
+// import { client } from './database/db';
 
 export class App {
   public app: express.Application;
@@ -24,7 +24,7 @@ export class App {
     this.env = NODE_ENV || 'development';
     this.port = PORT || 3000;
 
-    this.connectToDatabase();
+    // this.connectToDatabase();
     this.initializeMiddlewares();
     this.initializeRoutes(routes);
     this.initializeSwagger();
@@ -44,16 +44,16 @@ export class App {
     return this.app;
   }
 
-  private async connectToDatabase() {
-    AppDataSource.initialize()
-      .then(() => {
-        logger.info(`======= Data Source has been initialized =======`);
-        logger.info(`======= Connected to Database =======`);
-      })
-      .catch(err => {
-        logger.error('Error during Data Source initialization', err);
-      });
-  }
+  // private async connectToDatabase() {
+  //   client
+  //     .connect()
+  //     .then(() => {
+  //       logger.info(`======= Connected to database =======`);
+  //     })
+  //     .catch(err => {
+  //       logger.error('Failed to connect database', err);
+  //     });
+  // }
 
   private initializeMiddlewares() {
     this.app.use(morgan(LOG_FORMAT, { stream }));

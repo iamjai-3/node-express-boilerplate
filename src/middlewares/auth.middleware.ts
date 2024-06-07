@@ -1,7 +1,7 @@
 import { NextFunction, Response } from 'express';
 import { verify } from 'jsonwebtoken';
 import { SECRET_KEY } from '@config';
-import { UserEntity } from '@entities/users.entity';
+import { UserEntity } from '@/schemas/users.entity';
 import { HttpException } from '@/exceptions/httpException';
 import { DataStoredInToken, RequestWithUser } from '@interfaces/auth.interface';
 
